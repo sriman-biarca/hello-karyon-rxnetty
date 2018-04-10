@@ -6,7 +6,6 @@ addons:
   apt:
     packages:
       - openjdk-8-jdk
-      - mvn
 jdk: openjdk8
 script:
-  - mvn clean package
+  - ./gradlew clean packDeb
