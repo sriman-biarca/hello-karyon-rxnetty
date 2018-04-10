@@ -8,4 +8,5 @@ addons:
       - openjdk-8-jdk
 jdk: openjdk8
 script:
-  - ./gradlew clean packDeb
+  - ./gradlew clean run
+  - ./gradlew clean fatJar
