@@ -11,5 +11,7 @@ script:
   - wget https://dl.bintray.com/smira/aptly/0.9.5/debian-squeeze-x64/aptly
   - chmod +x aptly
   - ./aptly repo create hello
+  - ./gradlew clean packDeb
+  - ./aptly repo add -force-replace hello build/distributions/*.deb
   - ./aptly publish repo -architectures="amd64" -component=main -distribution=trusty -skip-signing=true hello
-  - ./aptly repo add -force-replace hello build/distributions/*.deb ~/aptly publish update -force-overwrite -architectures="amd64" -skip-signing=true trusty
+  - ./aptly publish update -force-overwrite -architectures="amd64" -skip-signing=true trusty
