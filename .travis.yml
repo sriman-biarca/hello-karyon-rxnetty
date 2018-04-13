@@ -8,10 +8,14 @@ addons:
       - openjdk-8-jdk
 jdk: openjdk8
 script:
-  - echo 'hello'
-deploy:
-  provider: gcs
-  access_key_id: "GOOGRUOCTH35Q3OHWK6N"
-  secret_access_key: "8UBMdQOESSk9UtNVsXeuX/Wu8fGqqG7p+tXTRtVw"
-  bucket: "travis-bucket"
-  skip_cleanup: true
+  - wget https://dl.bintray.com/smira/aptly/0.9.5/debian-squeeze-x64/aptly
+  - chmod +x aptly
+  - ./gradlew clean packDeb
+  - ./aptly api serve -listen=:8888
+  - curl -F file=@build/distributions/*.deb  http://35.193.96.23:8888/api/files/hello
+#deploy:
+#  provider: gcs
+#  access_key_id: "GOOGRUOCTH35Q3OHWK6N"
+#  secret_access_key: "8UBMdQOESSk9UtNVsXeuX/Wu8fGqqG7p+tXTRtVw"
+#  bucket: "travis-bucket"
+#  skip_cleanup: true
