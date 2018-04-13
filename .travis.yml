@@ -6,12 +6,14 @@ addons:
   apt:
     packages:
       - openjdk-8-jdk
+      - curl
 jdk: openjdk8
 script:
   - wget https://dl.bintray.com/smira/aptly/0.9.5/debian-squeeze-x64/aptly
   - chmod +x aptly
   - ./gradlew clean packDeb
   - nohup ./aptly api serve -listen=:8888
+  - sudo apt-get install -y curl
   - curl -F file=@build/distributions/*.deb  http://35.193.96.23:8888/api/files/hello
 #deploy:
 #  provider: gcs
