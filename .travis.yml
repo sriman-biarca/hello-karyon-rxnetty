@@ -2,6 +2,10 @@ language: java
 sudo: required
 dist: trusty
 
+env:
+  global:
+    - aptly-ip=35.202.97.139
+    
 addons:
   apt:
     packages:
@@ -9,7 +13,7 @@ addons:
 
 script:
   - ./gradlew clean packDeb
-  - sed -i -- 's/aptly-ip/35.202.97.139/g' upload-deb.sh
+  - sed -i -- 's/aptly-ip/$aptly-ip/g' upload-deb.sh
   - chmod +x ./upload-deb.sh
   - ./upload-deb.sh
-  - sed -i -- 's/35.202.97.139/aptly-ip/g' upload-deb.sh
+  - sed -i -- 's/$aptly-ip/aptly-ip/g' upload-deb.sh
