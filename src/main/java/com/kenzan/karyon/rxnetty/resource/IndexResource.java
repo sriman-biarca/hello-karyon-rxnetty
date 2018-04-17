@@ -51,11 +51,11 @@ public class IndexResource implements RequestHandler<ByteBuf, ByteBuf>{
                     public Observable<Void> call(String body) {
                         String instanceId = "";
                         String instanceName = "";
-                        String userdata = "Biarca";
+                        String userdata = "";
 
                         try{
                             instanceId = execCmd("curl http://metadata/computeMetadata/v1/instance/id -H Metadata-Flavor:Google") + execCmd("wget -q -O - http://instance-data/latest/meta-data/instance-id");
-                            instanceName = execCmd("curl http://metadata/computeMetadata/v1/instance/hostname -H Metadata-Flavor:Google") + execCmd("wget -q -O - http://instance-data/latest/meta-data/instance-name");
+                            instanceName = execCmd("curl http://metadata/computeMetadata/v1/instance/hostname -H Metadata-Flavor:Google | cut -d . -f1") + execCmd("wget -q -O - http://instance-data/latest/meta-data/instance-name");
                             userdata = System.getenv("USERDATA");
 
                         } catch (Exception e){
