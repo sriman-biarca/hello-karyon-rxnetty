@@ -51,7 +51,7 @@ public class IndexResource implements RequestHandler<ByteBuf, ByteBuf>{
                     public Observable<Void> call(String body) {
                         String instanceId = "";
                         String instanceName = "";
-                        String userdata = "";
+                        String userdata = "Biarca";
 
                         try{
                             instanceId = execCmd("curl http://metadata/computeMetadata/v1/instance/id -H Metadata-Flavor:Google") + execCmd("wget -q -O - http://instance-data/latest/meta-data/instance-id");
@@ -61,7 +61,7 @@ public class IndexResource implements RequestHandler<ByteBuf, ByteBuf>{
                         } catch (Exception e){
                             e.printStackTrace();
                         }
-                        response.writeString("<html><head><style>body{text-align:center;font-family:'Lucida Grande'}</style></head><body><img src='https://www.mirantis.com/partners/biarca/Biarca-2-1024x216.png' /><h2>Example Spinnaker Application</h2><h3>Instance Id " + instanceId + "</h3><h3>Instance Name " + instanceName + "</h3><h3>$USERDATA ENV VAR: " + userdata + "</h3></body></html>");
+                        response.writeString("<html><head><style>body{text-align:center;font-family:'Lucida Grande'}</style></head><body><img src='https://www.mirantis.com/wp-content/uploads/2015/12/Biarca_Logo.png' /><h2>Example Spinnaker Application</h2><h3>Instance Id " + instanceId + "</h3><h3>Instance Name " + instanceName + "</h3><h3>$USERDATA ENV VAR: " + userdata + "</h3></body></html>");
                         return response.close();
                     }
                 });
