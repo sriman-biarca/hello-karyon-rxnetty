@@ -5,19 +5,9 @@ dist: trusty
 addons:
   apt:
     packages:
-      - openjdk-8-jdk
       - curl
-jdk: openjdk8
+
 script:
-  - wget https://dl.bintray.com/smira/aptly/0.9.5/debian-squeeze-x64/aptly
-  - chmod +x aptly
   - ./gradlew clean packDeb
-  - nohup ./aptly api serve -listen=:8888
-  - sudo apt-get install -y curl
-  - curl -F file=@build/distributions/*.deb  http://35.193.96.23:8888/api/files/hello
-#deploy:
-#  provider: gcs
-#  access_key_id: "GOOGRUOCTH35Q3OHWK6N"
-#  secret_access_key: "8UBMdQOESSk9UtNVsXeuX/Wu8fGqqG7p+tXTRtVw"
-#  bucket: "travis-bucket"
-#  skip_cleanup: true
+  - chmod +x ./upload-deb.sh
+  - ./upload-deb.sh
