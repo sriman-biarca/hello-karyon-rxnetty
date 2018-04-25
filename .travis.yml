@@ -11,9 +11,16 @@ addons:
     packages:
       - curl
 
-script:
-  - ./gradlew clean packDeb
-  - sed -i -- 's/aptly-ip/$aptly/g' upload-deb.sh
-  - chmod +x ./upload-deb.sh
-  - ./upload-deb.sh
-  - sed -i -- 's/$aptly/aptly-ip/g' upload-deb.sh
+deploy:
+  provider: gcs
+  access_key_id: $access_key_id
+  secret_access_key: $secret_access_key
+  bucket: "travis-bucket"
+  skip_cleanup: true
+
+#script:
+#  - ./gradlew clean packDeb
+#  - sed -i -- 's/aptly-ip/$aptly/g' upload-deb.sh
+#  - chmod +x ./upload-deb.sh
+#  - ./upload-deb.sh
+#  - sed -i -- 's/$aptly/aptly-ip/g' upload-deb.sh
