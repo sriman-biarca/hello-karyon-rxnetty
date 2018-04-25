@@ -2,15 +2,18 @@ language: java
 sudo: required
 dist: trusty
 
-env:
-  global:
-    - aptly=35.202.97.139
+#env:
+#  global:
+#    - aptly=35.202.97.139
     
-addons:
-  apt:
-    packages:
-      - curl
+#addons:
+#  apt:
+#    packages:
+#      - curl
 
+script:
+  - ./gradlew clean packDeb
+  
 deploy:
   provider: gcs
   access_key_id: $access_key_id
