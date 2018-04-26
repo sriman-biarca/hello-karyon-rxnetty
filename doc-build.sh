@@ -19,7 +19,6 @@ echo $GCLOUD_SERVICE_KEY_PRD | base64 --decode -i > $HOME/spin-terra.json
 echo $GCLOUD_SERVICE_KEY_PRD
 
 cat $HOME/spin-terra.json
-
 gcloud auth activate-service-account --key-file=$HOME/spin-terra.json
 
 gcloud --quiet config set project spinnaker-terraform
