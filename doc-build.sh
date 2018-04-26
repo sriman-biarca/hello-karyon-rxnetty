@@ -33,4 +33,8 @@ export CLOUDSDK_CORE_DISABLE_PROMPTS=1
 gcloud components install docker-credential-gcr
 docker-credential-gcr configure-docker
 
-gcloud docker -- push gcr.io/spinnaker-terraform/hello-code
+#gcloud docker -- push gcr.io/spinnaker-terraform/hello-code
+
+
+docker tag hello-code gcr.io/spinnaker-terraform/hello-code:test
+docker push gcr.io/spinnaker-terraform/hello-code
