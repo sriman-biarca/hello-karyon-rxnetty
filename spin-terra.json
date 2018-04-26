@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "spinnaker-terraform",
+  "private_key_id": "578fd367e3480e869328644e84126e41991d8285",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDPP02W+PV4yAYr\nh98CKX1/9fhdOUFOtWK9PjSvQWsYZcul5BB5dAumXY3ZZxnwSDqKkC9hzIj9IvHA\n9hABbZFWt0lh+VX2ticidOvHtoDgT8SWFXmHVUfBu/bzeft+K0+4pCj3JP75xtlZ\nivgM7xHV8EureCEtrDE4aURaWKfLqz8X4rF+v9PNYnsfHnI94LNne5Kfkl5DaPRb\nuV4SQn/4CZBX9LZQdLVaC9FdEGar9URp+8aoWN4dBxGcvr0ccFwomHwEXvTzVaRG\n7pvrezZfu6q1ThaFF3IryG90cKDNrXGX/Co2Q5Sknb+yai67wq82ZVGfoxLXusxN\nrP5GYshFAgMBAAECggEAAvCtN13XT6wYyE/QZl2z0depuxrXlhgFK1WhVjYpoIo7\nKiKS6EIw8x6DJ2kqyUmhCPu0LGFENUEkaF4lSnvlMrN9d0YcBdi+M+MwQCBS8ju3\neICb/YNEdhdmULxziK3xHte3XBA6jM0ZIsfRro9Ks7wJushEwjrd5OS7a0O0N7Oy\n7COTFZvZ1Q3XbffxwCSI8Fb5aAMhgj9waJ3wrM64wTCs308B+hUh3eOVxNIUb/Zp\nK2iz4cfDIS/QfUBe+maGcoPHn5wYxXvxY4bGTtFVGrzKRUP+znihMwIj2paikhJj\n/wcAkcm4828EEnE8PRp6mfbwrmx2Sn3VL/CLXYE3oQKBgQD9JINea20C1B+S5nAo\nZq25XD/NyRDMwVm3NmIptabw5fe/+BZ6A+TnkSVqu3khwz5KRfoy5BgFMwMrQ8hU\njpDUEX2hiAAThoLYuyO3O8XbdY285UBIWMGswBdNyECeDWc1uewTjjEGlobXOpvn\nilTv8XiOxOZNBg22AWJDfs3aYQKBgQDRlituAjODJYswad0+LvRzkst/uwfK0BCS\njjgUSPL2jg/ejx9YJxXFqAKC4TycP/ityFooUZom60UJ6t0mvcgrW4itXCno5+lW\n4MJ43T0wfiLpvG5uS1QkGcC58XB3TUK0Wj4uiA1lMUYPGKi2edpQQLbkNVrCqlY8\nbUTuqw+gZQKBgBdgW9FIUlTEifXi2dChSsGnRy0VuDtwT3yfxQjdAYGVev97RXgX\nC/hmavIkRddcVFA/jg9NCPrR7yT7qXBFihJLWzKjgH5NGaAyB+ZP2sGdZW1gLkOA\nDsKJKp3ANFdkHXfUp3xW0Sgull0hyGvlVlqiDeQBQtMyD+oSzqQ0/YWBAoGBAJWq\ndzkHuWFd3hekgal2PnqJyWhdVyMtkagWh1V1AouuxwZXjjqVLqcHY0OzNGUgCaWP\n/VHtc/d26sY6QdL4k4jixKeHuSXo9mhj+Hv3AUsvyB7BwNpiUKO3ADnIgFexhIDm\nMKFp5qbsmOsO4Ovt+Eh27iPpNfbtTMe6AA+veGlBAoGAdQSfPbc488xAGpAYLQQ/\noOJjzKNZWpVtmS1JY0cqDIbd6scB8aD9Mkw9AtHNhQo/L9Hxu7tsN1wN2HGOY/nL\n0tZe0H05YFS9VlWFNtd3OSmxlFojiDo25pxgavq/agVZOv/VRqNWrkhE0ek49Twa\nMJ9hZUE2tR2aedFk7QjIK9E=\n-----END PRIVATE KEY-----\n",
+  "client_email": "spinnaker-gce-account@spinnaker-terraform.iam.gserviceaccount.com",
+  "client_id": "117169453129726017326",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spinnaker-gce-account%40spinnaker-terraform.iam.gserviceaccount.com"
+}
