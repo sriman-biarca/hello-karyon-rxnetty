@@ -8,8 +8,8 @@ set -e
 
 docker build -t gcr.io/spinnaker-terraform/hello-code:test .
 
-echo $GCLOUD_SERVICE_KEY_PRD | base64 --decode -i > spin-terra.json
-gcloud auth activate-service-account --key-file spin-terra.json
+echo $GCLOUD_SERVICE_KEY_PRD | base64 --decode -i > $HOME/spin-terra.json
+gcloud auth activate-service-account --key-file $HOME/spin-terra.json
 
 gcloud --quiet config set project spinnaker-terraform
 
