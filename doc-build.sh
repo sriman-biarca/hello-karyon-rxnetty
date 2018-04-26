@@ -15,8 +15,11 @@ source /home/travis/google-cloud-sdk/path.bash.inc
 gcloud --quiet version
 
 echo $GCLOUD_SERVICE_KEY_PRD | base64 --decode -i > $HOME/spin-terra.json
-gcloud auth activate-service-account --key-file $HOME/spin-terra.json
+
+
+cat $HOME/spin-terra.json
+
+gcloud auth activate-service-account --key-file=$HOME/spin-terra.json
 
 gcloud --quiet config set project spinnaker-terraform
-
 gcloud docker push gcr.io/spinnaker-terraform/hello-code
