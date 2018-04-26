@@ -10,7 +10,6 @@ RUN apt-get update \
         && apt-get install -y oracle-java8-installer gradle \
         && cd hello-karyon-rxnetty \
         && ./gradlew clean packDeb \
-        && cp build/libs/hello-karyon-rxnetty-all-0.1.0.jar /var/lib/docker/tmp/docker-builder708251287/build/libs/hello-karyon-rxnetty-all-0.1.0.jar
+        && cp build/libs/hello-karyon-rxnetty-all-0.1.0.jar /biarca-pool-all.jar
         
-ADD build/libs/hello-karyon-rxnetty-all-0.1.0.jar /biarca-pool-all.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/biarca-pool-all.jar"]
