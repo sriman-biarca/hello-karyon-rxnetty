@@ -1,7 +1,6 @@
 FROM openjdk:8-jre
-RUN useradd --home-dir /home/hkr --create-home -U hkr
-USER hkr
-RUN cd /home/hkr/; mkdir -p .hkr
-ADD build/libs/hello-karyon-rxnetty-all-0.1.0.jar /home/hkr/h-k-rx-all.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/home/hkr/h-k-rx-all.jar"]
-
+RUN useradd --home-dir /home/biarca --create-home -U biarca
+USER biarca
+RUN cd /home/biarca/; mkdir -p .biarca
+ADD build/libs/hello-karyon-rxnetty-all-0.1.0.jar /home/biarca/biarca-pool-all.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/home/biarca/biarca-pool-all.jar"]
